@@ -1,0 +1,22 @@
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" data-ui-sref="admin.dashboard">[Project-Name]</a>
+        </div>
+        <div class="collapse pull-right">
+          <ul class="nav navbar-nav">
+              <li class="dropdown" data-ng-click="menuOpen=!menuOpen" data-ng-class="{open:menuOpen}">
+                <a class="dropdown-toggle" role="button"><strong class="glyphicon glyphicon-th-list"></strong></a>
+              <ul class="dropdown-menu">
+                  <li><a data-ui-sref="admin.settings"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+                <li data-role="separator" class="divider"></li>
+                <li><a data-ui-sref="admin.login"><span class="glyphicon glyphicon-off text-danger"></span> Logout</a></li>
+                
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
