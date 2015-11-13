@@ -1,0 +1,145 @@
+//SASS file to manage css preprocessing
+
+//  Variables   
+$font-body: Helvetica, sans-serif;
+$font-headings: Helvetica, sans-serif;
+$footer-height: 30px;
+
+// Branding Colors
+$primay:#1c84c6;
+$info: #1c84c6;
+$warning: #f8ac59;
+$danger: #ed5565;
+$success: #1ab394;
+
+$brand-black: #000;
+$brand-white: #FFF;
+$grey-dark: #333;
+$grey-mideum: #e4e4e7;
+$grey-light: #fafafa;
+
+$grid-border: #e3e3e6;
+$text-color: #7c7c7c;
+
+/* Setting fonts for headers */
+h1, h2, h3, h4, h5, h6{ font-family: $font-headings; color: $brand-black;}
+/* Disable responsiveness */
+.container{min-width: 1003px !important;}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  font-family: $font-body;
+  margin-bottom: $footer-height;
+  padding: 30px 0;
+  background-color: #f3f3f4;
+  color: $text-color;
+}
+.header-wrap{position: relative; z-index: 100;}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+  background-color: $grey-dark;
+  
+  .copyright{
+      color: $grey-light;
+      line-height: $footer-height;
+  }
+}
+
+.result-grid{
+    border:1px solid $grid-border; border-bottom: none;
+    background: $brand-white;
+    
+    .grid-head{
+        font-weight: 500;
+        color: #454545;
+        line-height: 45px;
+        font-weight: bold;
+    }
+    .grid-head >div:first-child:before,
+    .grid-head >div:last-child:before,
+    .grid-head >div:nth-child(3):before,
+    .grid-row .compact >div:first-child:before,
+    .grid-row .compact >div:last-child:before,
+    .grid-row .compact >div:nth-child(3):before
+    {
+        content: ''; margin-right:20px; height: 100%;
+    }
+    .grid-row{
+        cursor: pointer;
+        
+        .compact >div{
+            min-height: 65px;
+            padding-top:25px;
+        }
+        .compact >div:first-child{ font-size: 1.2em;}
+        .details{display: none;}
+    }
+    .grid-row.open{
+        .details{
+           display: block;
+        }
+    }
+    
+    .decorate{
+        border-bottom: 1px solid $grid-border;
+        position: relative;
+    }
+    .decorate:before{
+        content: ''; display: block; height: 100%; left: 0px; top: 0px; position: absolute;
+        border-left: 7px solid #d2d2d2;
+    }
+    .decorate.pending:before{border-left-color: $warning;}
+    .decorate.running:before{border-left-color: $info;}
+    .decorate.passed:before{border-left-color: $success;}
+    .decorate.failed:before{border-left-color: $danger;}
+    
+    .decorate.pending .compact .status{color: $warning;}
+    .decorate.running .compact .status{color: $info;}
+    .decorate.passed .compact .status{color: $success;}
+    .decorate.failed .compact .status{color: $danger;}
+}
+.progress{
+    margin:0px;
+    height:10px;
+    .circle{
+        border:5px solid $grey-mideum;
+        border-radius: 15px; -webkit-border-radius: 15px; 
+        display: inline-block; width: 27px; height: 27px;
+        position: absolute; height: auto;
+    }
+}
+
+/* Additional Icons */
+.icon-pending{
+    border: 2px solid $warning;
+    border-radius: 10px;
+    padding: 2px; font-size: 0.65em; text-align: center;
+}
+
+/* CSS based animation*/
+@keyframes rotate {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -360deg);
+    transform: rotate3d(0, 0, 1, -360deg);
+    
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+  }
+}
+
+.rotateLinear {
+  -webkit-animation: rotate 1.5s linear;
+  animation: rotate 1.5s linear;
+ 
+}
+

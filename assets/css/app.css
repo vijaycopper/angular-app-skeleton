@@ -1,0 +1,127 @@
+/* Setting fonts for headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, sans-serif;
+  color: #000; }
+
+/* Disable responsiveness */
+.container {
+  min-width: 1003px !important; }
+
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  font-family: Helvetica, sans-serif;
+  margin-bottom: 30px;
+  padding: 30px 0;
+  background-color: #f3f3f4;
+  color: #7c7c7c; }
+
+.header-wrap {
+  position: relative;
+  z-index: 100; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #333; }
+  .footer .copyright {
+    color: #fafafa;
+    line-height: 30px; }
+
+.result-grid {
+  border: 1px solid #e3e3e6;
+  border-bottom: none;
+  background: #FFF; }
+  .result-grid .grid-head {
+    font-weight: 500;
+    color: #454545;
+    line-height: 45px;
+    font-weight: bold; }
+  .result-grid .grid-head > div:first-child:before,
+  .result-grid .grid-head > div:last-child:before,
+  .result-grid .grid-head > div:nth-child(3):before,
+  .result-grid .grid-row .compact > div:first-child:before,
+  .result-grid .grid-row .compact > div:last-child:before,
+  .result-grid .grid-row .compact > div:nth-child(3):before {
+    content: '';
+    margin-right: 20px;
+    height: 100%; }
+  .result-grid .grid-row {
+    cursor: pointer; }
+    .result-grid .grid-row .compact > div {
+      min-height: 65px;
+      padding-top: 25px; }
+    .result-grid .grid-row .compact > div:first-child {
+      font-size: 1.2em; }
+    .result-grid .grid-row .details {
+      display: none; }
+  .result-grid .grid-row.open .details {
+    display: block; }
+  .result-grid .decorate {
+    border-bottom: 1px solid #e3e3e6;
+    position: relative; }
+  .result-grid .decorate:before {
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    border-left: 7px solid #d2d2d2; }
+  .result-grid .decorate.pending:before {
+    border-left-color: #f8ac59; }
+  .result-grid .decorate.running:before {
+    border-left-color: #1c84c6; }
+  .result-grid .decorate.passed:before {
+    border-left-color: #1ab394; }
+  .result-grid .decorate.failed:before {
+    border-left-color: #ed5565; }
+  .result-grid .decorate.pending .compact .status {
+    color: #f8ac59; }
+  .result-grid .decorate.running .compact .status {
+    color: #1c84c6; }
+  .result-grid .decorate.passed .compact .status {
+    color: #1ab394; }
+  .result-grid .decorate.failed .compact .status {
+    color: #ed5565; }
+
+.progress {
+  margin: 0px;
+  height: 10px; }
+  .progress .circle {
+    border: 5px solid #e4e4e7;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    height: auto; }
+
+/* Additional Icons */
+.icon-pending {
+  border: 2px solid #f8ac59;
+  border-radius: 10px;
+  padding: 2px;
+  font-size: 0.65em;
+  text-align: center; }
+
+/* CSS based animation*/
+@keyframes rotate {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -360deg);
+    transform: rotate3d(0, 0, 1, -360deg); }
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center; } }
+.rotateLinear {
+  -webkit-animation: rotate 1.5s linear;
+  animation: rotate 1.5s linear; }
+
+/*# sourceMappingURL=app.css.map */

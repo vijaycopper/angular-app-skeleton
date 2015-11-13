@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-ng-app="Admin" data-ng-controller="coreMainController as core">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title data-ng-bind="'APP_TITLE' | translate"></title>
+
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="assets/css/app.css">
+
+        <link rel="stylesheet" ng-href="{{config.THEME}}/css/style.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="{{bodyClass}}">
+        <div data-ng-show="processing" class="text-center loader-global"></div>
+       
+            <!-- header view -->
+            <div data-ui-view="header" class="header-wrap animated fadeIn">
+
+            </div>
+            <!-- EO header view -->
+
+            <!-- container view -->
+            <div data-ui-view="container" class="container"></div>
+            <!-- EO Header view -->
+
+            <!-- footer view -->
+            <footer data-ui-view="footer" class="footer page-footer text-center">
+
+            </footer>
+            <!-- EO footer view -->
+        <script src="js/angular.min.js" type="text/javascript"></script>
+        <script src="js/angular-route.min.js" type="text/javascript"></script>
+        <script src="js/angular-ui-router.min.js" type="text/javascript"></script>
+        <script src="js/angular-translate.min.js" type="text/javascript"></script>
+        <script src="js/angular.animate.min.js" type="text/javascript"></script>
+       
+        <script src="modules/app/app.js"></script>
+        <script src="modules/app/config.js"></script>
+        <script src="modules/dashboard/dashboard.js"></script>
+        <script src="modules/translate/translate.js" type="text/javascript"></script>
+        <script src="modules/login/login.js" type="text/javascript"></script>
+        <script src="modules/settings/settings.js" type="text/javascript"></script>
+    </body>
+</html>
