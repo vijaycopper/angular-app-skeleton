@@ -13,7 +13,7 @@
                     var LANG = appConfigProvider.get('LANGUAGE');
                     $translateProvider.preferredLanguage(LANG);
                     $translateProvider.useStaticFilesLoader({
-                        prefix: 'localize/' ,
+                        prefix: 'localize/',
                         suffix: '.json'
                     });  
                 }
