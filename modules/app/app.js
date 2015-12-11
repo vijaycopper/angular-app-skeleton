@@ -3,7 +3,7 @@
     'use strict';
 
     /**
-     * @module: Dealer Admin
+     * @module: mainApp
      * 
      */
 
@@ -12,10 +12,10 @@
         ,'app.config'
         ,'app.dashboard'
         ,'app.login'
-        ,'admin-settings'
+        ,'app.settings'
     ];
 
-    angular.module('Admin', modules)
+    angular.module('mainApp', modules)
 
             .config(['$stateProvider', '$compileProvider', '$urlRouterProvider', 'appConfigProvider',
                 function ($stateProvider, $compileProvider, $urlRouterProvider, appConfigProvider) {

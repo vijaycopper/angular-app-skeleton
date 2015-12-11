@@ -16,7 +16,7 @@
                                 views: {
                                     'container@': {
                                         templateUrl: 'modules/login/login.html',
-                                        controller: userLoginController
+                                        controller: "userLoginController as user"
                                     }
                                 }
                             })

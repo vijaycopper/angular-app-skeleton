@@ -8,7 +8,7 @@
  * 
  */
 
-angular.module('admin-settings', [])
+angular.module('app.settings', [])
          
         .config(['$stateProvider', function($stateProvider){
             $stateProvider
@@ -16,8 +16,7 @@ angular.module('admin-settings', [])
                 url: '/settings',
                 views: {
                     'container@': {
-                        templateUrl: 'modules/settings/settings.html',
-                        controller: "settingsController as settings"
+                        templateUrl: 'modules/settings/settings.html'
                     }
                 }
             });

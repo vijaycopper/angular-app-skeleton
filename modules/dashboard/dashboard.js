@@ -15,7 +15,7 @@
                                 url: "/dashboard",
                                 views: {
                                     'container@': {
-                                        templateUrl: 'modules/app/dashboard-tmpl.html',
+                                        templateUrl: 'modules/dashboard/dashboard-tmpl.html',
                                         controller: 'dashboardController as dashboard'
                                     }
                                 }
@@ -25,26 +25,7 @@
             ])
             
             .controller('dashboardController', dashboardController)
-            .directive('gridRowData', function(){
-                return {
-                   templateUrl : function(elem, attr){
-                       console.log(attr);
-                       //'modules/dashboard/grid-row-'+ rowData +'.html'
-                   },
-                    compile: function(elem, attr){
-                            function link($scope, elem, attr){
-                               
-                               templateUrl = 'modules/dashboard/grid-row-pending.html';
-                               //elem.html("<ng-include src='modules/dashboard/grid-row-" + $scope.rowData.status +".html'></ng-include>"); 
-                            }
-                            return link;
-                        },
-                    scope: {
-                        rowData: '=rowData'
-                    }
-                    
-                }
-            })
+            
 
 
 
